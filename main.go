@@ -4,8 +4,10 @@ import (
 	"github.com/Josgtg/git-clone/cli"
 )
 
+// TODO: Create tests for the object types
+
 func main() {
-	args := cli.GetArgs()
+	args := cli.ParseArgs()
 
 	switch args.Command() {
 	case "init":
@@ -13,6 +15,6 @@ func main() {
 	case "status":
 	case "commit":
 	default:
-		panic("Unrecognized argument")
+		panic("unrecognized argument")
 	}
 }

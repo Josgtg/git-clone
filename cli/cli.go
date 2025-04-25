@@ -18,7 +18,7 @@ var CLI struct {
 	} `cmd:""  help:"Realizes a commit including all the changes added."`
 }
 
-func GetArgs() *kong.Context {
+func ParseArgs() *kong.Context {
 	return kong.Parse(&CLI)
 } 
 
